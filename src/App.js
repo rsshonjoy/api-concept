@@ -24,21 +24,21 @@ function App() {
     .then(data => setRandomUser(data.results[0]))
   }, [])
   return (
-    <div>
-    <h1>JSON Placeholder</h1>
-    {
-      users.map(user => <li>{user.name}</li>)
-    }
+    <div className="App">
+      <h1>JSON Placeholder</h1>
+      {
+        users.map(user => <li>{user.name}</li>)
+      }
 
-    <h1>Single User Name: {singleUser.name}</h1>
+      <h1>Single User Name: {singleUser.name}</h1>
 
-    <h2>Random User First Name: {randomUser.name && randomUser.name.first}</h2>
-    <h2>Random User Last Name: {randomUser.name?.last}</h2>
-    <h2>Random User Gender: {randomUser.gender}</h2>
+      <h2>Random User First Name: {randomUser.name && randomUser.name.first}</h2>
+      <h2>Random User Last Name: {randomUser.name?.last}</h2>
+      <h2>Random User Gender: {randomUser.gender}</h2>
 
-    {/* TheMealDB api */}
-    <MealDetail></MealDetail>
-    <MealFinder></MealFinder>
+      {/* TheMealDB api */}
+      <MealDetail></MealDetail>
+      <MealFinder></MealFinder>
     </div>
   );
 };
