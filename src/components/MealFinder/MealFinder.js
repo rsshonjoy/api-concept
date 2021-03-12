@@ -21,7 +21,7 @@ const MealFinder = () => {
       <p>meal found: {meals?.length || 0}</p>
       <ul>
         {
-          meals.map(meal => <li>{meal.strMeal}</li>)
+          meals?.map(meal => <li>{meal.strMeal}</li>)
         }
       </ul>
     </div>
