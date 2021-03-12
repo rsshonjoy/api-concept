@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import MealDetail from './components/MealDetail/MealDetail';
+import MealFinder from './components/MealFinder/MealFinder';
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -37,6 +38,7 @@ function App() {
 
     {/* TheMealDB api */}
     <MealDetail></MealDetail>
+    <MealFinder></MealFinder>
     </div>
   );
 };
