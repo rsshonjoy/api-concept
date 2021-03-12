@@ -19,6 +19,11 @@ const MealFinder = () => {
       <input type="text" onChange={handleChange} placeholder="search food"/>
       <p>searching: {search}</p>
       <p>meal found: {meals?.length || 0}</p>
+      <ul>
+        {
+          meals.map(meal => <li>{meal.strMeal}</li>)
+        }
+      </ul>
     </div>
   );
 };
