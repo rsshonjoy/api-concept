@@ -18,7 +18,7 @@ const MealFinder = () => {
       <h1>Find Delicious Foods</h1>
       <input type="text" onChange={handleChange} placeholder="search food"/>
       <p>searching: {search}</p>
-      <p>meal found: {meals.length}</p>
+      <p>meal found: {meals?.length}</p>
     </div>
   );
 };
