@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import './App.css';
+import MealDetail from './components/MealDetail/MealDetail';
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -33,6 +34,9 @@ function App() {
     <h2>Random User First Name: {randomUser.name && randomUser.name.first}</h2>
     <h2>Random User Last Name: {randomUser.name?.last}</h2>
     <h2>Random User Gender: {randomUser.gender}</h2>
+
+    {/* TheMealDB api */}
+    <MealDetail></MealDetail>
     </div>
   );
 };
