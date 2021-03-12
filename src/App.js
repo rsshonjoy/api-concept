@@ -4,6 +4,8 @@ import './App.css';
 function App() {
   const [users, setUsers] = useState([]);
   const [singleUser, setSingleUser] = useState({});
+  const [randomUser, setRandomUser] = useState({});
+
   useEffect(() => {
     const url = 'https://jsonplaceholder.typicode.com/users';
     fetch(url)
@@ -14,6 +16,10 @@ function App() {
     fetch('https://jsonplaceholder.typicode.com/users/1')
     .then(res => res.json())
     .then(data => setSingleUser(data))
+
+    fetch('https://randomuser.me/api/')
+    .then(res => res.json())
+    .then(data => setRandomUser(data.results[0]))
   }, [])
   return (
     <div>
@@ -24,6 +30,7 @@ function App() {
 
     <h1>Single User Name: {singleUser.name}</h1>
 
+    <h2>Random User: {randomUser.gender}</h2>
     </div>
   );
 };
